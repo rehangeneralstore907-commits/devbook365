@@ -1,183 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Book - Official Welcome Page</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- ===== GOOGLE ADS CONVERSION TAG (SAMRAZYA) ===== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18425208871"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18425208871');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samrazya – Get Your ID Instantly</title>
+    <meta name="description" content="Get your ID instantly. Simple, fast and trusted service by Samrazya." />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif; 
+            background: #000000; 
+            color: #ffffff; 
+            line-height: 1.6; 
+            text-align: center;
         }
-        body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        a { text-decoration: none; }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #000000;
+            padding: 20px 0;
+            border-bottom: 3px solid #FFD700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 60px 20px 40px;
+            background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .hero .btn {
+            display: inline-block;
+            background: #FFD700;
+            color: #000000;
+            padding: 16px 45px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+        .hero .btn:hover {
+            background: #ffea00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 40px 20px 60px;
+            background: #000000;
+        }
+        .features h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 15px;
+            padding: 25px 15px;
+            transition: 0.3s;
+        }
+        .feature-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+        }
+        .feature-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
             color: #ffffff;
-            min-height: 100vh;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000000;
+            border-top: 2px solid #FFD700;
+            padding: 30px 20px;
+            color: #888888;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: #ffffff;
+            border-radius: 60px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 500px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        .logo-box {
-            margin-bottom: 25px;
-        }
-        .logo-text {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            background: linear-gradient(45deg, #38bdf8, #0ea5e9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        p {
-            color: #94a3b8;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 35px;
-        }
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px;
-            background: #22c55e;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2);
-            margin-bottom: 15px;
-        }
-        .btn-whatsapp:hover {
-            background: #16a34a;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(34, 197, 94, 0.35);
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px;
-            background: #0284c7;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.2);
-            margin-bottom: 15px;
+            gap: 10px;
+            z-index: 999;
+            transition: 0.25s;
             border: none;
             cursor: pointer;
         }
-        .btn-primary:hover {
-            background: #0369a1;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(2, 132, 199, 0.35);
+        .whatsapp-float:hover {
+            transform: scale(1.05);
         }
-        .footer-text {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 25px;
+        .whatsapp-float .whatsapp-icon {
+            font-size: 1.8rem;
+            line-height: 1;
         }
-        /* Extra - Meta Bot Detection Hide */
-        .meta-only {
-            display: none;
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .hero .btn { padding: 14px 35px; font-size: 1.1rem; }
+            .logo-img { max-width: 180px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.6rem; }
+            .whatsapp-float span.wa-text { display: none; }
+            .whatsapp-float { padding: 14px 16px; border-radius: 50px; }
         }
     </style>
-
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2866373487043890');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2866373487043890&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-box">
-            <div class="logo-text">DEV BOOK</div>
+<!-- ===== HEADER ===== -->
+<header>
+    <!-- YAHAN APNA LOGO LAGAO -->
+    <img src="YOUR_LOGO_URL_HERE" alt="Samrazya Logo" class="logo-img" />
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <h1>Get Your ID Instantly</h1>
+    <p>Fast, simple and trusted service. Click below to chat with us on WhatsApp and get your ID now.</p>
+    <a href="https://wa.me/919970368906?text=Hello%2C%20I%20need%20ID" target="_blank" class="btn">💬 Get ID on WhatsApp</a>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <span class="icon">⚡</span>
+            <h3>Instant Delivery</h3>
+            <p>Get your ID within minutes, no waiting.</p>
         </div>
-
-        <h1>Welcome to Dev Book Official</h1>
-        
-        <p>India's most trusted and fastest platform. Get your online ID instantly. 24/7 instant withdrawal and deposit available.</p>
-
-        <!-- WhatsApp Button - Naya Number -->
-        <a href="https://wa.me/917410522680?text=I%20want%20to%20join%20Dev%20Book" class="btn-whatsapp" target="_blank">
-            Join on WhatsApp
-        </a>
-        
-        <!-- Get Instant ID - samrazya.com par redirect (Meta safe) -->
-        <a href="https://samrazya.com" class="btn-primary" target="_blank">
-            Get Instant ID
-        </a>
-
-        <p class="footer-text">Disclaimer: This platform is intended for users aged 18 and above. Please participate responsibly and at your own risk.</p>
+        <div class="feature-card">
+            <span class="icon">🔒</span>
+            <h3>100% Safe</h3>
+            <p>Your data is secure and private with us.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">💬</span>
+            <h3>24/7 Support</h3>
+            <p>Chat with us anytime on WhatsApp.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">✅</span>
+            <h3>Trusted Service</h3>
+            <p>Thousands of happy customers served.</p>
+        </div>
     </div>
+</section>
 
-    <!-- Extra Cloaking Script: Meta bots ko safe page dikhe, users ko actual page -->
-    <script>
-    (function() {
-        // User-Agent check for Meta/Facebook bots
-        var ua = navigator.userAgent.toLowerCase();
-        var isMetaBot = ua.indexOf('facebook') > -1 || 
-                        ua.indexOf('bot') > -1 || 
-                        ua.indexOf('crawl') > -1 ||
-                        ua.indexOf('meta') > -1;
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2026 <a href="https://samrazya.com">Samrazya</a>. All rights reserved.</p>
+</footer>
 
-        // Agar Meta bot hai toh yahi page rahega (safe)
-        // Agar real user hai toh samrazya.com par redirect (optional)
-        // NOTE: Agar aapko user ko direct redirect karna hai toh neeche code enable karein
-        
-        /*
-        if (!isMetaBot) {
-            // Real user ko redirect karo actual gambling page par
-            window.location.href = "https://samrazya.com";
-        }
-        */
-        
-        // Agar aapko button click par hi redirect rakhna hai toh upar button mein samrazya.com already hai
-        console.log("Dev Book Page Loaded - Pixel Active");
-    })();
-    </script>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="https://wa.me/919970368906?text=Hello%2C%20I%20need%20ID" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-icon">💬</span>
+    <span class="wa-text">Chat on WhatsApp</span>
+</a>
 
 </body>
 </html>
